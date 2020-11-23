@@ -1,0 +1,6 @@
+C:\Users\SiphiweManda\source\repos\StringCalculatorApp\bin\Debug\StringCalculatorApp.dll
+C:\Users\SiphiweManda\source\repos\StringCalculatorApp\bin\Debug\StringCalculatorApp.pdb
+C:\Users\SiphiweManda\source\repos\StringCalculatorApp\obj\Debug\StringCalculatorApp.csprojAssemblyReference.cache
+C:\Users\SiphiweManda\source\repos\StringCalculatorApp\obj\Debug\StringCalculatorApp.csproj.CoreCompileInputs.cache
+C:\Users\SiphiweManda\source\repos\StringCalculatorApp\obj\Debug\StringCalculatorApp.dll
+C:\Users\SiphiweManda\source\repos\StringCalculatorApp\obj\Debug\StringCalculatorApp.pdb
