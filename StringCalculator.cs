@@ -8,13 +8,13 @@ namespace StringCalculatorApp
     {
         public int Add(string numbers)
         {
-           
+
             if (HasCustomSeparator(numbers))
             {
                 return Sum(GetNumbersString(numbers), GetCustomSeparator(numbers));
             }
 
-            return Sum(numbers, new[] {",", "\n"});
+            return Sum(numbers, new[] { ",", "\n" });
         }
 
         public string GetNumbersString(string definition)
@@ -22,7 +22,7 @@ namespace StringCalculatorApp
             return definition.Substring(FindEndOfDefinition(definition) + 1);
         }
 
-        private int FindEndOfDefinition(string definition){return definition.IndexOf('\n');}
+        private int FindEndOfDefinition(string definition) { return definition.IndexOf('\n'); }
 
         public string[] GetCustomSeparator(string definition)
         {
@@ -30,15 +30,12 @@ namespace StringCalculatorApp
 
             var customSeparator =
                 definition.Substring(startOfDefinition, FindEndOfDefinition(definition) - startOfDefinition);
-            customSeparator = customSeparator.Replace("[", string.Empty)
-                                            .Replace("]", string.Empty);
-
-            return new[] {customSeparator};
+            return customSeparator.Split(new[] { '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
         }
 
         private bool HasCustomSeparator(string numbers)
         {
-          
+
             return numbers.StartsWith("//");
         }
 
@@ -47,7 +44,7 @@ namespace StringCalculatorApp
             var actualNumbers = RemoveNumbersOverThousand(SplitStringsIntoNumbers(numbers, separator));
             CheckForNegativeNumbers(actualNumbers);
 
-            return actualNumbers.Sum(); 
+            return actualNumbers.Sum();
         }
 
         private void CheckForNegativeNumbers(int[] actualNumbers)
@@ -66,8 +63,8 @@ namespace StringCalculatorApp
 
         private int[] RemoveNumbersOverThousand(IEnumerable<int> actualNumbers)
         {
-             return actualNumbers.Where(i => i < 1001).ToArray();
-           
+            return actualNumbers.Where(i => i < 1001).ToArray();
+
         }
     }
 }
